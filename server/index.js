@@ -6,6 +6,7 @@ const DIST_DIR = path.join(__dirname, '../dist'); // NEW
 const HTML_FILE = path.join(DIST_DIR, 'index.html'); // NEW
 const TARGET_FILE = path.join(__dirname, '../src/assets/index.png'); // NEW
 const AR = path.join(__dirname, '../src/ar/ar.html'); // NEW
+const TEXTURE = path.join(__dirname, '../src/ar/Cube_BaseColor.jpg'); // NEW
 global.pathRoot = __dirname;
 
 
@@ -25,6 +26,9 @@ app.get('/target', (req, res) => {
  });
  app.get('/ar', (req, res) => {
   res.sendFile(AR); // EDIT
+ });
+ app.get('/texture', (req, res) => {
+  res.sendFile(TEXTURE); // EDIT
  });
 app.listen(port, function () {
  console.log('App listening on port: ' + port);
