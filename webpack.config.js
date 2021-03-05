@@ -10,16 +10,29 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: "[name].js"
   }, // NEW Ends
-  plugins: [htmlPlugin],
+  plugins: [
+    htmlPlugin
+  ],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            // ... other options
+            plugins: [
+              // ... other plugins
+            ].filter(Boolean),
+          },
         }
       }
     ]
-  }
+  },
+  devServer: {
+    port: 4000,
+    open: true,
+    hot: true
+},
 };
