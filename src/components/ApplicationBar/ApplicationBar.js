@@ -129,7 +129,7 @@ export default function ApplicationBar({title, visible}) {
             <CameraEnhanceIcon/>
           </Fab>
           <div className={classes.grow} />
-          <IconButton color="inherit">
+          <IconButton onClick={()=>{ Linking.openURL('https://google.com')}} color="inherit">
             <PictureAsPdfIcon />
           </IconButton>
         </Toolbar>
