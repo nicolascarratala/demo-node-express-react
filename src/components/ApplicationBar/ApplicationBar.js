@@ -125,17 +125,15 @@ export default function ApplicationBar({title, visible}) {
           <IconButton edge="start" color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
-          <Fab color="secondary" aria-label="add" className={classes.fabButton}>
-            <CameraEnhanceIcon/>
-          </Fab>
-          <div className={classes.grow} />
           <a target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar">
-            
-              <PictureAsPdfIcon />
-            
+            <Fab color="secondary" aria-label="add" className={classes.fabButton}>
+              <CameraEnhanceIcon/>
+            </Fab>
           </a>
-
-          
+          <div className={classes.grow} />
+          <IconButton onClick={()=>{ Linking.openURL('https://google.com')}} color="inherit">
+            <PictureAsPdfIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </React.Fragment>
