@@ -130,9 +130,9 @@ export default function ApplicationBar({title, visible}) {
           </Fab>
           <div className={classes.grow} />
           <a target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar">
-            <IconButton color="inherit">
+            
               <PictureAsPdfIcon />
-            </IconButton>
+            
           </a>
 
           
