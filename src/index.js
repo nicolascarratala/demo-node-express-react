@@ -3,4 +3,4 @@ import React from 'react';
     const Index = () => {
         return <div>WELCOME TO REACT APP!</div>;
     };
-    ReactDOM.render(<Index />,document.getElementbyID('app'));
+    ReactDOM.render(<Index />,document.getElementById('app'));
