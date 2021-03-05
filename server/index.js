@@ -7,7 +7,7 @@ const HTML_FILE = path.join(DIST_DIR, 'index.html'); // NEW
 const TARGET_FILE = path.join(__dirname, '../src/assets/index.png'); // NEW
 const AR = path.join(__dirname, '../src/ar/ar.html'); // NEW
 const TEXTURE = path.join(__dirname, '../src/ar/Cube_BaseColor.jpg'); // NEW
-const NTF = path.join(__dirname, '../src/ar/index.png'); // NEW
+const NTF = path.join(__dirname, '../src/ar/index'); // NEW
 global.pathRoot = __dirname;
 
 
