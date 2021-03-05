@@ -1,68 +1,111 @@
 
 <head>
 
-  <!-- React -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <!------ Styles ---------->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <style>  
-      .buttons {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 5em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-      }
-
-      .say-hi-button {
-        padding: 0.25em;
-        border-radius: 4px;
-        border: none;
-        background: white;
-        color: black;
-        width: 4em;
-        height: 2em;
-      }
-      .arjs-loader {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .arjs-loader div {
-        text-align: center;
-        font-size: 4em;
-        color: rgb(255, 230, 0);
-        font-weight: bold;
-      }
-      .a-loader-title {
-        color: red;
-      }
-      
-  </style>
-  <!-- comemnt on production -->  
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- app.js -->
   
+  <!-- import aframe and then ar.js with image tracking / location based features -->
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<script>
+  window.onload = function () {
+    document
+      .querySelector(".say-hi-button")
+      .addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+        alert("Hi there!");
+        document.getElementById('a').style.display = 'none';
+      });
+  };
+</script>
+
+<!-- style for the loader -->
+<style>
+  .buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .say-hi-button {
+    padding: 0.25em;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    color: black;
+    width: 4em;
+    height: 2em;
+  }
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 4em;
+    color: rgb(255, 230, 0);
+    font-weight: bold;
+  }
+  .a-loader-title {
+    color: red;
+  }
+  
+</style>
 </head>
 
-<body >
-  
-    <script type="text/javascript" src="https://eva-madambirras.herokuapp.com/app"></script>
-  
+<body style="margin : 0px; overflow: hidden;">
+<!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+<div class="arjs-loader">
+  <div>Cargando</div>
 
+</div>
+<div class="buttons">
+  <button class="say-hi-button" >SAY HI!</button>
+</div>
+
+<!-- a-frame scene -->
+<a-scene
+
+  vr-mode-ui="enabled: false;"
+  renderer="logarithmicDepthBuffer: true;"
+  embedded
+  arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+>
+  <!-- a-nft is the anchor that defines an Image Tracking entity -->
+  <!-- on 'url' use the path to the Image Descriptors created before. -->
+  <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
+  <a-nft
+    type="nft"
+    url="https://eva-madambirras.herokuapp.com/index"
+    smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+  >
+    
+    <a-box position="50 0 50" scale="200 2 300" src="https://eva-madambirras.herokuapp.com/Cube_BaseColor.jpg" shadow></a-box>
+  </a-nft>
+  <!-- static camera that moves according to the device movemenents -->
+  <a-entity camera></a-entity>
+</a-scene>
 </body>
+
+
 
 

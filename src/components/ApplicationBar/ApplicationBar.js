@@ -131,7 +131,7 @@ export default function ApplicationBar({title, visible}) {
             </Fab>
           </a>
           <div className={classes.grow} />
-          <IconButton onClick={()=>{ Linking.openURL('https://google.com')}} color="inherit">
+          <IconButton color="inherit">
             <PictureAsPdfIcon />
           </IconButton>
         </Toolbar>
