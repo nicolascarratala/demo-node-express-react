@@ -81,15 +81,7 @@ const useStyles = makeStyles((theme) => ({
   },
   grow: {
     flexGrow: 1,
-  },
-  fabButton: {
-    position: 'absolute',
-    zIndex: 1,
-    top: -30,
-    left: 0,
-    right: 0,
-    margin: '0 auto',
-  },
+  }
 }));
 
 export default function ApplicationBar({title, visible}) {
@@ -103,31 +95,23 @@ export default function ApplicationBar({title, visible}) {
           <Typography className={classes.text} variant="h5" gutterBottom>
             {title}
           </Typography>
-          {/* <List className={classes.list}>
-            {messages.map(({ id, primary, secondary, person }) => (
-              <React.Fragment key={id}>
-                {id === 1 && <ListSubheader className={classes.subheader}>Today</ListSubheader>}
-                {id === 3 && <ListSubheader className={classes.subheader}>Yesterday</ListSubheader>}
-                <ListItem button>
-                  <ListItemAvatar>
-                    <Avatar alt="Profile Picture" src={person} />
-                  </ListItemAvatar>
-                  <ListItemText primary={primary} secondary={secondary} />
-                </ListItem>
-              </React.Fragment>
-            ))}
-          </List> */}
+        
         </Paper>
       ) : (<></>) }
     
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar >
-          <IconButton edge="start" color="inherit" aria-label="open drawer">
-            <MenuIcon />
-          </IconButton>
-          <a target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar.html">
-            <Fab color="secondary" aria-label="add" className={classes.fabButton}>
-              <CameraEnhanceIcon/>
+       
+          <a class="animate__animated animate__jackInTheBox" style={{
+             position: 'absolute',
+             zIndex: 1,
+             top: -40,
+             left: 30,
+             right: 0,
+             margin: '0'
+          }}  target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar.html">
+            <Fab style={{backgroundColor: "#ffd500", width: 80, height:80}} aria-label="add" className={classes.fabButton}>
+              <CameraEnhanceIcon style={{fontSize:50}}/>
             </Fab>
           </a>
           <div className={classes.grow} />
