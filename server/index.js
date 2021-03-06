@@ -37,3 +37,4 @@ app.get('/target', (req, res) => {
 app.listen(port, function () {
  console.log('App listening on port: ' + port);
 });
+app.use(express.static('public'));
