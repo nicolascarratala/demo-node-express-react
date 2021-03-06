@@ -125,7 +125,7 @@ export default function ApplicationBar({title, visible}) {
           <IconButton edge="start" color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
-          <a target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar">
+          <a target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar.html">
             <Fab color="secondary" aria-label="add" className={classes.fabButton}>
               <CameraEnhanceIcon/>
             </Fab>
