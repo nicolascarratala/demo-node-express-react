@@ -62,7 +62,7 @@ export default function Cards() {
             <CameraEnhanceIcon/>
           </Button> */}
           </Typography>
-          <img className={classes.img} src="https://walle-api-madam-birras.herokuapp.com/target"></img>
+          <img className={classes.img} src="https://walle-api-madam-birras.herokuapp.com/index.png"></img>
           {/* <Typography variant="body2" component="p">
             Luego escanee la siguiente imagen
             <img className={classes.img} src="http://localhost:3000/target"></img>
