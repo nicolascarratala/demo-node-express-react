@@ -6,7 +6,7 @@ import SplashScreen from './pages/SplashScreen';
 const App = () => {
     return (
         <div style={{backgroundColor: "#000"}}>
-            <SplashScreen/>
+            <SplashScreen/> 
         </div>
     );
 };
