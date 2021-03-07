@@ -5,10 +5,19 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <!-- <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script> -->
 <script>
- var targetEl = document.querySelector('#target');
-  targetEl.addEventListener('click', function() {
-    targetEl.setAttribute('material', {color: 'red'});
-  });
+
+var targetEl = document.querySelector('#target');
+document.addEventListener("touchstart", touchHandler);
+
+function touchHandler(e) {
+    if(e.touches) {
+      targetEl.setAttribute('material', {color: 'red'});
+        e.preventDefault();
+    }
+}
+ 
+    
+  
 </script>
 
 <!-- style for the loader -->
