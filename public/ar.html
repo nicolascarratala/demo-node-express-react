@@ -5,7 +5,11 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <!-- <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script> -->
 <script>
-  AFRAME.registerComponent('school-playground', {
+  window.onload = function () {
+    document
+      .querySelector(".say-hi-button")
+      .addEventListener("click", function () {
+        AFRAME.registerComponent('school-playground', {
         init: function () {
           // Solution for Modifying Entities.
           var sceneEl = document.querySelector('a-scene'); 
@@ -13,6 +17,8 @@
           
         }
       });
+      });
+  };
 </script>
 
 <!-- style for the loader -->
@@ -79,7 +85,7 @@
 
   <!-- a-frame scene -->
   <a-scene
-    school-playground
+  school-playground
     arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
     embedded
     renderer="logarithmicDepthBuffer: true;"
