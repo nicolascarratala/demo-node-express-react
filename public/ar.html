@@ -3,7 +3,7 @@
   <!-- import aframe and then ar.js with image tracking / location based features -->
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-<script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 <script>
   window.onload = function () {
     document
@@ -82,29 +82,35 @@
 
   <!-- a-frame scene -->
   <a-scene
-
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
     embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    vr-mode-ui="enabled: false"
+    gesture-detector
+    id="scene"
   >
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
-      markerhandler 
-      emitevents="true" 
-      cursor="rayOrigin: mouse" 
-      id="animated-marker"
       type="nft"
       url="https://walle-api-madam-birras.herokuapp.com/index"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
-    >
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;" >
       
-      <a-box id="animated-model" position="70 0 -200" scale="400 2 500" src="https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.jpg" shadow></a-box>
+      <a-box 
+        class="clickable"
+        gesture-handler="minScale: 0.25; maxScale: 10" 
+        id="animated-model" 
+        position="70 0 -200" 
+        scale="400 2 500" 
+        src="https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.jpg" 
+        shadow ></a-box>
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
