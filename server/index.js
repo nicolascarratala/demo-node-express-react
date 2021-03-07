@@ -8,7 +8,6 @@ const AR = path.join(__dirname, '../src/ar/ar.html'); // NEW
 
 global.pathRoot = __dirname;
 
-
 const mockResponse = {
   foo: 'bar',
   bar: 'foo'

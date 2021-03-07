@@ -92,6 +92,10 @@
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
+      markerhandler 
+      emitevents="true" 
+      cursor="rayOrigin: mouse" 
+      id="animated-marker"
       type="nft"
       url="https://walle-api-madam-birras.herokuapp.com/index"
       smooth="true"
@@ -100,7 +104,7 @@
       smoothThreshold="5"
     >
       
-      <a-box position="50 0 -200" scale="200 2 300" src="https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.jpg" shadow></a-box>
+      <a-box id="animated-model" position="50 0 -200" scale="200 2 300" src="https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.jpg" shadow></a-box>
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
