@@ -9,16 +9,9 @@
     document
       .querySelector(".say-hi-button")
       .addEventListener("click", function () {
-        AFRAME.registerComponent('school-playground', {
-        init: function () {
-          // Solution for Modifying Entities.
-          var sceneEl = document.querySelector('a-scene'); 
-          sceneEl.querySelector('a-box').setAttribute('position', {x: 0, y: 0, z: 0});
-          
-        }
+        document.querySelector('#fading-cube').emit('fade');
       });
-      });
-  };
+      };
 </script>
 
 <!-- style for the loader -->
@@ -107,14 +100,11 @@
       emitevents="true"
       cursor="fuse: false; rayOrigin: mouse;" >
       
-      <a-box 
-        class="clickable"
-        gesture-handler="minScale: 0.25; maxScale: 10" 
-        id="animated-model" 
-        position="70 0 -200" 
-        scale="400 2 500" 
-        src="https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.jpg" 
-        shadow ></a-box>
+      <a-entity id="fading-cube" position="70 0 -200"  geometry="primitive: box" material="opacity: 1"  >
+
+        <a-animation attribute="material.opacity" begin="fade" to="0"></a-animation>
+
+      </a-entity >
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
