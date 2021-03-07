@@ -6,12 +6,6 @@
 <!-- <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script> -->
 <script>
 
-
-var targetEl = document.querySelector('#target');
-document.addEventListener("touchstart", touchHandler);
-
-
-
 function touchHandler(e) {
   alert("hello");
     if(e.touches) {
@@ -19,6 +13,23 @@ function touchHandler(e) {
         e.preventDefault();
     }
 }
+
+
+AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        var targetEl = document.querySelector('#target');
+        document.addEventListener("touchstart", touchHandler);
+      });
+  }
+});
+
+
+
+
+
+
+
  
     
   
