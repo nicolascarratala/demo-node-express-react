@@ -9,6 +9,8 @@
 var targetEl = document.querySelector('#target');
 document.addEventListener("touchstart", touchHandler);
 
+alert("hello");
+
 function touchHandler(e) {
     if(e.touches) {
       targetEl.setAttribute('material', {color: 'red'});
