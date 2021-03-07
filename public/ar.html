@@ -6,12 +6,14 @@
 <!-- <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script> -->
 <script>
 
+
 var targetEl = document.querySelector('#target');
 document.addEventListener("touchstart", touchHandler);
 
-alert("hello");
+
 
 function touchHandler(e) {
+  alert("hello");
     if(e.touches) {
       targetEl.setAttribute('material', {color: 'red'});
         e.preventDefault();
