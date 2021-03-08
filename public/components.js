@@ -37,15 +37,14 @@
           var el = this.el;
           el.addEventListener('click', (e) => { 
 
-            alert(this.el.getAttribute('position').x);
-            if(this.el.getAttribute('position').x.toString() === "0"){
-              this.el.setAttribute('position', "-400 0 -200" )
+            if(this.el.getAttribute('position').x.toString() === "70"){
+              this.el.setAttribute('position', "-330 0 -200" )
             }
-            if(this.el.getAttribute('position') === "-400 0 -200"){
-              this.el.setAttribute('position', "-800 0 -200" )             
+            if(this.el.getAttribute('position').x.toString() === "-330"){
+              this.el.setAttribute('position', "-730 0 -200" )             
             }
-            if(this.el.getAttribute('position') === "-800 0 -200"){
-              this.el.setAttribute('position', "0 0 -200" )
+            if(this.el.getAttribute('position').x.toString() === "-730"){
+              this.el.setAttribute('position', "70 0 -200" )
             }
           });
         }
