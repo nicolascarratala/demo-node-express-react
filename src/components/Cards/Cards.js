@@ -1,12 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import CameraEnhanceIcon from '@material-ui/icons/CameraEnhance';
-import Animation from '../Animation/Animation';
+import Image from './index.png'; 
 
 const useStyles = makeStyles({
   root: {
@@ -19,8 +16,7 @@ const useStyles = makeStyles({
   img:{
     
     margin:0,
-    width: '100%',
-    borderRadius: 10
+    width: '100%'
  
   },
   bullet: {
@@ -41,7 +37,7 @@ const useStyles = makeStyles({
     height:50
   },
   card:{
-    
+    borderRadius: 30,
     marginBottom: 10
   }
 });
@@ -56,27 +52,22 @@ export default function Cards() {
 
 </div>
 
-    <div class="animate__animated animate__jackInTheBox">
-    <Card className={classes.card} >
-        <CardContent>
-         
-          <Typography style={{fontWeight: 'bold'}} variant="body2" component="p">
-            -Para ver el menu presione el boton de la camara 📷 que tiene abajo.
-        
-          </Typography>
-        <Typography style={{fontWeight: 'bold'}} variant="body2" component="p">
-            -También es posible verlo en pfd con el boton de la esquina inferior derecha.
-   
-          </Typography>
-        
-        </CardContent>
-      </Card>
+    <div class="animate__animated animate__zoomInDown">
       <Card className={classes.card} >
         <CardContent>
-          <Typography style={{fontWeight: 'bold'}} variant="body2" component="p">
-          Luego escanee la siguiente imagen 🖼
+          <Typography style={{fontWeight: 'bold', fontSize: 20}} variant="body2" component="p">
+          ¿Como ver el menú?
           </Typography>
-          <img className={classes.img} src="https://walle-api-madam-birras.herokuapp.com/index.png"></img>
+          <Typography style={{fontWeight: 'bold'}} variant="body2" component="p">
+          1. Presione botón cámara mágica
+          </Typography>
+          <Typography style={{fontWeight: 'bold'}} variant="body2" component="p">
+          2. Escanee la siguiente imagen 🖼
+          </Typography>
+          <img className={classes.img} src={Image}></img>
+          <Typography style={{fontWeight: 'bold'}} variant="body2" component="p">
+          PD: También es posible verlo en versión pdf
+          </Typography>
         </CardContent>
       </Card>
     </div>

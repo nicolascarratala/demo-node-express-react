@@ -51,18 +51,16 @@ export default function ApplicationBar({title, visible}) {
       ) : (<></>) }
     
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar >
-       
-          
-          <a class="animate__animated animate__jackInTheBox" href="https://walle-api-madam-birras.herokuapp.com/ar.html">
-          <IconButton color="inherit">
-          <CameraEnhanceIcon style={{backgroundColor: 'yellow',borderRadius: 90 , fontSize:50, color: 'black', padding: 10}}/>
-          </IconButton>
+        <Toolbar style={{display: 'flex', margin: 'auto'}}>
+          <a class="animate__animated animate__rollIn" style={{margin: 10}}  href="https://walle-api-madam-birras.herokuapp.com/menu.pdf">
+            <IconButton style={{backgroundColor: 'white',borderRadius: 90, color: 'black', padding: 10}} color="inherit">
+              <PictureAsPdfIcon style={{fontSize:50}}/>
+            </IconButton>
           </a>
-          <a style={{backgroundColor:'blue'}} class="animate__animated animate__jackInTheBox" href="https://walle-api-madam-birras.herokuapp.com/menu.pdf">
-          <IconButton color="inherit">
-            <PictureAsPdfIcon style={{backgroundColor: 'white',borderRadius: 90 , fontSize:50, color: 'black', padding: 10}}/>
-          </IconButton>
+          <a class="animate__animated animate__rollIn" style={{margin: 10}}  href="https://walle-api-madam-birras.herokuapp.com/ar.html">
+            <IconButton style={{backgroundColor: 'yellow',borderRadius: 90, color: 'black', padding: 10}} color="inherit">
+              <CameraEnhanceIcon style={{fontSize:50}}/>
+            </IconButton >
           </a>
         </Toolbar>
       </AppBar>
