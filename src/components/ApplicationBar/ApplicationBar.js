@@ -117,7 +117,7 @@ export default function ApplicationBar({title, visible}) {
           <div className={classes.grow} />
           <a class="animate__animated animate__jackInTheBox" href="https://walle-api-madam-birras.herokuapp.com/menu.pdf">
           <IconButton color="inherit">
-            <PictureAsPdfIcon style={{fontSize:50}}/>
+            <PictureAsPdfIcon style={{fontSize:50, color: 'white'}}/>
           </IconButton>
           </a>
         </Toolbar>
