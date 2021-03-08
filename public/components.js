@@ -36,17 +36,17 @@
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-
-            alert(el.getAttribute('position').x);
-            if(el.getAttribute('position').x.toString() === "0"){
-              el.setAttribute('position', "-400 0 -200" )
-            }
-            if(el.getAttribute('position').x.toString() === "-400"){
-              el.setAttribute('position', "-800 0 -200" )             
-            }
-            if(el.getAttribute('position').x.toString() === "-800"){
-              el.setAttribute('position', "0 0 -200" )
-            }
+            el.setAttribute('position', "-400 0 -200" );
+            // alert(el.getAttribute('position').x);
+            // if(el.getAttribute('position').x.toString() === "0"){
+            //   this.el.setAttribute('position', "-400 0 -200" )
+            // }
+            // if(el.getAttribute('position').x.toString() === "-400"){
+            //   this.el.setAttribute('position', "-800 0 -200" )             
+            // }
+            // if(el.getAttribute('position').x.toString() === "-800"){
+            //   this.el.setAttribute('position', "0 0 -200" )
+            // }
           });
         }
       });
