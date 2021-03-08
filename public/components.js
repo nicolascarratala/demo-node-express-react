@@ -1,6 +1,6 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
-var count = 0;
+
 
     AFRAME.registerComponent('navigate-on-click', {
         schema: {
@@ -30,21 +30,20 @@ var count = 0;
         }
       });
 
+     
+
       AFRAME.registerComponent('image-change', {
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-            if(count === 0){
+            if(this.el.getAttribute('position') === "0 0 -200"){
               this.el.setAttribute('position', "-400 0 -200" )
-              count = 1;
             }
-            if(count === 1){
-              this.el.setAttribute('position', "-800 0 -200" )
-              count = 2;
+            if(this.el.getAttribute('position') === "-400 0 -200"){
+              this.el.setAttribute('position', "-800 0 -200" )             
             }
-            if(count === 2){
+            if(this.el.getAttribute('position') === "-800 0 -200"){
               this.el.setAttribute('position', "0 0 -200" )
-              count = 0;
             }
           });
         }
