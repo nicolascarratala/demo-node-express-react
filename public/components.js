@@ -33,7 +33,7 @@
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-            this.el.setAttribute('position', "70 0 -500" )
+            this.el.setAttribute('position', "200 0 -200" )
           });
         }
       });
