@@ -37,7 +37,6 @@
           var el = this.el;
           el.addEventListener('click', (e) => { 
 
-            alert(this.el.getAttribute('position').x);
             if(this.el.getAttribute('position').x.toString() === "0"){
               this.el.setAttribute('position', "-400 0 -200" )
             }
