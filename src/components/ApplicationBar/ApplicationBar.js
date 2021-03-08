@@ -53,19 +53,7 @@ export default function ApplicationBar({title, visible}) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar >
        
-          <a class="animate__animated animate__jackInTheBox" style={{
-             position: 'absolute',
-             zIndex: 1,
-             top: -40,
-             left: 30,
-             right: 0,
-             margin: '0',
-             backgroundColor:'white'
-          }}  target="_blank" href="https://walle-api-madam-birras.herokuapp.com/ar.html">
-            <Fab style={{backgroundColor: "#ffd500", width: 80, height:80}}>
-              <CameraEnhanceIcon style={{fontSize:50}}/>
-            </Fab>
-          </a>
+          
           <a class="animate__animated animate__jackInTheBox" href="https://walle-api-madam-birras.herokuapp.com/ar.html">
           <IconButton color="inherit">
           <CameraEnhanceIcon style={{backgroundColor: 'yellow',borderRadius: 90 , fontSize:50, color: 'black', padding: 10}}/>
