@@ -37,16 +37,18 @@
           var el = this.el;
           el.addEventListener('click', (e) => { 
             
+            var pos = el.getAttribute('position').x;
+
             // alert(el.getAttribute('position').x);
-            if(el.getAttribute('position').x == 0){
+            if(pos == 0){
               el.setAttribute('position', "-400 0 -200" );
             }
-            // if(el.getAttribute('position').x.toString() === "-400"){
-            //   this.el.setAttribute('position', "-800 0 -200" )             
-            // }
-            // if(el.getAttribute('position').x.toString() === "-800"){
-            //   this.el.setAttribute('position', "0 0 -200" )
-            // }
+            if(pos == -400){
+              el.setAttribute('position', "-800 0 -200" );           
+            }
+            if(pos == -800){
+              el.setAttribute('position', "0 0 -200" );
+            }
           });
         }
       });
