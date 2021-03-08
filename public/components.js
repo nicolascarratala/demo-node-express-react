@@ -36,19 +36,15 @@
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-
-            
-            if(this.el.getAttribute('position').x.toString() == "0"){
-              alert(this.el.getAttribute('position').x);
-              this.el.setAttribute('position', "-400 0 -200" );
+            if(el.getAttribute('position').x.toString() == "0"){
+              el.setAttribute('position', {x: -400, y: 0, z: -200});
             }
-            if(this.el.getAttribute('position').x.toString() == "-400"){
-              this.el.setAttribute('position', "-800 0 -200" );          
+            if(el.getAttribute('position').x.toString() == "-400"){
+              el.setAttribute('position', {x: -800, y: 0, z: -200});          
             }
             if(this.el.getAttribute('position').x.toString() == "-800"){
-              this.el.setAttribute('position', "0 0 -200" );
+              el.setAttribute('position', {x: 0, y: 0, z: -200});
             }
-
           });
         }
       });
