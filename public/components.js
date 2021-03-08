@@ -31,10 +31,9 @@
 
       AFRAME.registerComponent('image-change', {
         init: function () {
-          let src = ["https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.png","https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.png"]
           var el = this.el;
           el.addEventListener('click', (e) => { 
-            this.el.setAttribute('src', src[Math.floor(Math.random() * src.length)])
+            this.el.setAttribute('src', "https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.png")
           });
         }
       });
