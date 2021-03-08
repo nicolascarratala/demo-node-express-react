@@ -1,5 +1,6 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
+var count = 0;
 
     AFRAME.registerComponent('navigate-on-click', {
         schema: {
@@ -33,7 +34,18 @@
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-            this.el.setAttribute('position', "-470 0 -200" )
+            if(count === 0){
+              this.el.setAttribute('position', "-400 0 -200" )
+              count = 1;
+            }
+            if(count === 1){
+              this.el.setAttribute('position', "-800 0 -200" )
+              count = 2;
+            }
+            if(count === 2){
+              this.el.setAttribute('position', "0 0 -200" )
+              count = 0;
+            }
           });
         }
       });
