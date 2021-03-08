@@ -33,7 +33,7 @@
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-            this.el.setAttribute('src', "https://walle-api-madam-birras.herokuapp.com/Cube_BaseColor.png")
+            this.el.setAttribute('src', "https://walle-api-madam-birras.herokuapp.com/index.png")
           });
         }
       });
