@@ -33,7 +33,7 @@
         init: function () {
           var el = this.el;
           el.addEventListener('click', (e) => { 
-            this.el.setAttribute('src', "https://walle-api-madam-birras.herokuapp.com/index.png")
+            this.el.setAttribute('position', "70 0 50" )
           });
         }
       });
